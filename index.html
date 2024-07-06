@@ -1,422 +1,260 @@
 <!DOCTYPE html>
 <html lang="fa">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>فرم اطلاعات پروژه وب سایت</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        direction: rtl;
-        padding: 20px;
-        background-color: #121212;
-        color: #e0e0e0;
-      }
 
-      .title {
-        font-size: calc(1rem + 0.75vw);
-        text-align: center;
-        margin: 1rem;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرم اطلاعات پروژه وب سایت</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      padding: 20px;
+      background-color: #121212;
+      color: #e0e0e0;
+    }
 
-      form {
-        background: #1e1e1e;
-        padding: 1rem;
-        border-radius: 0.75rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        width: 30%;
-        margin: auto;
-        border: 1px solid #444;
-      }
+    .title {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-      .form-group {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem auto;
-      }
+    form {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 600px;
+      margin: auto;
+    }
 
-      label {
-        display: block;
-        width: 100%;
-        margin-bottom: 5px;
-        text-align: start;
-      }
+    .form-group {
+      margin-bottom: 15px;
+    }
 
-      input,
-      textarea,
-      select {
-        width: 100%;
-        max-width: 95%;
-        padding: 1rem;
-        margin: 1rem auto;
-        border: 1px solid #444;
-        border-radius: 0.75rem;
-        background-color: #2c2c2c;
-        color: #e0e0e0;
-      }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
 
-      select {
-        width: auto;
-      }
+    input,
+    textarea,
+    select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 1rem auto;
+      border: 1px solid #444;
+      border-radius: 4px;
+      background-color: #2c2c2c;
+      color: #e0e0e0;
+    }
 
-      textarea {
-        resize: none;
-      }
+    textarea {
+      resize: none;
+    }
 
-      input[type="file"] {
-        display: none;
-      }
+    input[type="file"] {
+      display: none;
+    }
 
-      .file-input-container {
-        position: relative;
-        overflow: hidden;
-        margin: 1rem auto;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: start;
-      }
+    .file-input-container {
+      position: relative;
+      overflow: hidden;
+      display: inline-block;
+      margin: 1rem auto;
+    }
 
-      .file-input-container .btn-upload {
-        display: block;
-        width: 5rem;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 25px;
-        border-radius: 0.75rem;
-        cursor: pointer;
-        margin: 1rem;
-        text-align: center;
-      }
+    .file-input-container .btn-upload {
+      display: inline-block;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-      .file-input-container .btn-upload:hover {
-        background-color: #0056b3;
-      }
+    .file-input-container .btn-upload:hover {
+      background-color: #0056b3;
+    }
 
-      .file-input-container .file-name {
-        font-size: 1rem;
-      }
+    .file-input-container .file-name {
+      margin-left: 10px;
+      font-size: 16px;
+      display: inline-block;
+    }
 
-      button {
-        background: #007bff;
-        color: #fff;
-        border: none;
-        font-weight: 700;
-        padding: 10px 25px;
-        border-radius: 0.75rem;
-        cursor: pointer;
-      }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+      text-align: center;
+    }
 
-      button:hover {
-        background: #0056b3;
-      }
+    button:hover {
+      background: #0056b3;
+    }
 
-      .hidden {
-        display: none;
-      }
+    .hidden {
+      display: none;
+    }
 
-      .navigation-buttons {
-        text-align: center;
-        margin: 1rem;
-      }
+    .navigation-buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
 
-      fieldset {
-        padding: 1rem;
-        border: none;
-      }
+    fieldset {
+      border: none;
+    }
+  </style>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/persian-date@1.3.0/dist/persian-date.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
 
-      .logo {
-        width: 100px;
-        height: max-content;
-        margin: 0.75rem;
-      }
+</head>
 
-      footer {
-        width: 100%;
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        text-align: center;
-      }
+<body>
+  <h2 class="title">فرم اطلاعات پروژه وب سایت</h2>
 
-      footer a {
-        text-decoration: none;
-        color: white;
-      }
+  <form id="project-form">
+    <!-- بخش اول: اطلاعات عمومی -->
+    <fieldset id="section1">
+      <h3 class="title">اطلاعات عمومی</h3>
+      <div class="form-group">
+        <label for="name">نام و نام خانوادگی:</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-      @media screen and (max-width: 768px) {
-        form {
-          width: 90%;
+      <div class="form-group">
+        <label for="mobile">شماره موبایل:</label>
+        <input type="tel" id="mobile" name="mobile" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone_shop">شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label>
+        <input type="tel" id="phone_shop" name="phone_shop" required />
+      </div>
+
+      <div class="form-group">
+        <label for="national_id_card">عکس پشت و رو کارت ملی:</label>
+        <div class="file-input-container">
+          <input type="file" id="national_id_card" name="national_id_card" required />
+          <label for="national_id_card" class="btn-upload">انتخاب فایل</label>
+          <span class="file-name">فایلی انتخاب نشده است</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="birth_certificate">عکس دو صفحه اول شناسنامه:</label>
+        <div class="file-input-container">
+          <input type="file" id="birth_certificate" name="birth_certificate" required />
+          <label for="birth_certificate" class="btn-upload">انتخاب فایل</label>
+          <span class="file-name">فایلی انتخاب نشده است</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="working_hours">ساعات کاری:</label>
+        <input type="text" id="working_hours" name="working_hours" required />
+      </div>
+
+      <div class="form-group">
+        <label for="company_verification_date">تاریخ پاسخگویی شرکتی جهت احراز (یک هفته آینده):</label>
+        <input type="text" id="company_verification_date" name="company_verification_date" required />
+      </div>
+
+      <div class="form-group">
+        <label for="company_phone">شماره ثابت:</label>
+        <input type="tel" id="company_phone" name="company_phone" required />
+      </div>
+
+      <div class="navigation-buttons">
+        <button type="button" onclick="nextSection(1)">مرحله بعد</button>
+      </div>
+    </fieldset>
+
+    <!-- بخش دوم: مشخصات فنی وب سایت، مهلت انجام پروژه و بودجه، و نمونه وب سایت‌های مرجع و وب سایت‌های رقیب -->
+    <fieldset id="section2" class="hidden">
+      <h3 class="title">مشخصات فنی وب سایت</h3>
+      <div class="form-group">
+        <label for="account_number">شماره حساب:</label>
+        <input type="text" id="account_number" name="account_number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="business_license">عکس جواز کسب:</label>
+        <div class="file-input-container">
+          <input type="file" id="business_license" name="business_license" required />
+          <label for="business_license" class="btn-upload">انتخاب فایل</label>
+          <span class="file-name">فایلی انتخاب نشده است</span>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="host_credentials">هاست: یوزرنیم و پسورد هاست:</label>
+        <input type="text" id="host_credentials" name="host_credentials" required />
+      </div>
+
+      <div class="form-group">
+        <label for="payment_gateway">درگاه پرداخت واسط:</label>
+        <input type="text" id="payment_gateway" name="payment_gateway" required />
+      </div>
+
+      <div class="form-group">
+        <label for="tax_tracking_code">کد رهگیری مالیاتی:</label>
+        <input type="text" id="tax_tracking_code" name="tax_tracking_code" required />
+      </div>
+
+      <div class="navigation-buttons">
+        <button type="button" onclick="prevSection(2)">مرحله قبل</button>
+        <button type="submit">تایید و ارسال</button>
+      </div>
+    </fieldset>
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Initialize Persian date picker
+      $("#company_verification_date").persianDatepicker({
+        altField: "#company_verification_date",
+        altFormat: "YYYY/MM/DD",
+        observer: true,
+        format: "YYYY/MM/DD",
+        initialValue: false,
+        timePicker: {
+          enabled: false
         }
+      });
 
-        input,
-        textarea,
-        select {
-          width: 100%;
-          max-width: 95%;
-        }
-
-        .logo {
-          width: 80px;
-          height: auto;
-        }
-      }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/moment-hijri@2.1.2/dist/moment-hijri.min.js"></script>
-  </head>
-  <body>
-    <h2 class="title">فرم اطلاعات پروژه وب سایت</h2>
-
-    <form id="project-form">
-      <!-- بخش اول: اطلاعات عمومی -->
-      <fieldset id="section1">
-        <h3 class="title">اطلاعات عمومی</h3>
-        <div class="form-group">
-          <label for="name">نام و نام خانوادگی:</label>
-          <input type="text" id="name" name="name" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">ایمیل:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">شماره تلفن:</label>
-          <input type="tel" id="phone" name="phone" required />
-        </div>
-
-        <div class="form-group">
-          <label for="website">آدرس وب سایت (در صورت موجود بودن):</label>
-          <input type="url" id="website" name="website" />
-        </div>
-
-        <div class="form-group">
-          <label for="business_name">نام کسب و کار:</label>
-          <input type="text" id="business_name" name="business_name" required />
-        </div>
-
-        <div class="form-group">
-          <label for="address">آدرس کامل:</label>
-          <textarea id="address" name="address" rows="4" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="national_id">کد ملی:</label>
-          <input type="text" id="national_id" name="national_id" required />
-        </div>
-
-        <div class="form-group">
-          <label for="business_license"
-            >مجوز کسب و کار (در صورت موجود بودن):</label
-          >
-          <div class="file-input-container">
-            <input type="file" id="business_license" name="business_license" />
-            <label for="business_license" class="btn-upload">انتخاب فایل</label>
-            <span class="file-name">فایلی انتخاب نشده است</span>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="business_description">توضیحات کسب و کار:</label>
-          <textarea
-            id="business_description"
-            name="business_description"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-
-        <div class="navigation-buttons">
-          <button type="button" onclick="nextSection(2)">مرحله بعد</button>
-        </div>
-      </fieldset>
-
-      <!-- بخش دوم: مشخصات فنی وب سایت -->
-      <fieldset id="section2" class="hidden">
-        <h3 class="title">مشخصات فنی وب سایت</h3>
-        <div class="form-group">
-          <label for="website_purpose">هدف و کاربری وب سایت:</label>
-          <textarea
-            id="website_purpose"
-            name="website_purpose"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="features">ویژگی‌های مورد نیاز وب سایت:</label>
-          <textarea id="features" name="features" rows="4" required></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="content_management">سیستم مدیریت محتوا:</label>
-          <select id="content_management" name="content_management" required>
-            <option value="wordpress">وردپرس</option>
-            <option value="joomla">جوملا</option>
-            <option value="drupal">دروپال</option>
-            <option value="custom">سیستم سفارشی</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="design_preferences"
-            >ترجیح‌های طراحی (رنگ‌ها، فونت‌ها و غیره):</label
-          >
-          <textarea
-            id="design_preferences"
-            name="design_preferences"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="pages_needed"
-            >صفحات مورد نیاز (مانند صفحه اصلی، تماس با ما، درباره ما و
-            غیره):</label
-          >
-          <textarea
-            id="pages_needed"
-            name="pages_needed"
-            rows="4"
-            required
-          ></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="language_support">پشتیبانی از زبان‌ها:</label>
-          <input
-            type="text"
-            id="language_support"
-            name="language_support"
-            required
-          />
-        </div>
-
-        <div class="navigation-buttons">
-          <button type="button" onclick="previousSection(1)">مرحله قبل</button>
-          <button type="button" onclick="nextSection(3)">مرحله بعد</button>
-        </div>
-      </fieldset>
-
-      <!-- بخش سوم: مهلت انجام پروژه و بودجه و نمونه وب سایت‌های مرجع و وب سایت‌های رقیب -->
-      <fieldset id="section3" class="hidden">
-        <h3 class="title">
-          مهلت انجام پروژه و بودجه و نمونه وب سایت‌های مرجع و وب سایت‌های رقیب
-        </h3>
-        <div class="form-group">
-          <label for="project_deadline">مهلت انجام پروژه (هجری قمری):</label>
-          <input
-            type="text"
-            id="project_deadline"
-            name="project_deadline"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="budget">بودجه مورد نظر:</label>
-          <input type="number" id="budget" name="budget" required />
-        </div>
-
-        <div class="form-group">
-          <label for="reference_sites">نمونه وب سایت‌های مرجع:</label>
-          <textarea
-            id="reference_sites"
-            name="reference_sites"
-            rows="4"
-          ></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="competitor_sites">وب سایت‌های رقیب:</label>
-          <textarea
-            id="competitor_sites"
-            name="competitor_sites"
-            rows="4"
-          ></textarea>
-        </div>
-
-        <div class="navigation-buttons">
-          <button type="button" onclick="previousSection(2)">مرحله قبل</button>
-          <button type="submit">ارسال اطلاعات</button>
-        </div>
-      </fieldset>
-    </form>
-
-    <footer>
-      <a href="#">
-        <img class="logo" src="logo.png" alt="kian logo" />
-      </a>
-    </footer>
-
-    <script>
-      const sections = document.querySelectorAll("fieldset");
-      let currentSection = 1;
-
-      function showSection(section) {
-        sections.forEach((sec) => sec.classList.add("hidden"));
-        document.getElementById("section" + section).classList.remove("hidden");
-      }
-
-      function nextSection(section) {
-        if (validateSection(currentSection)) {
-          currentSection = section;
-          showSection(currentSection);
-        }
-      }
-
-      function previousSection(section) {
-        currentSection = section;
-        showSection(currentSection);
-      }
-
-      function validateSection(section) {
-        const inputs = document
-          .getElementById("section" + section)
-          .querySelectorAll("input, textarea, select");
-        let valid = true;
-        inputs.forEach((input) => {
-          if (!input.checkValidity()) {
-            input.reportValidity();
-            valid = false;
-          }
+      // Show selected file name for file inputs
+      document.querySelectorAll("input[type='file']").forEach(input => {
+        input.addEventListener('change', function () {
+          var fileName = this.value.split("\\").pop();
+          this.nextElementSibling.nextElementSibling.textContent = fileName ? fileName : "فایلی انتخاب نشده است";
         });
-        return valid;
-      }
-
-      // نمایش نام فایل انتخاب شده در فیلد انتخاب فایل
-      const fileInput = document.getElementById("business_license");
-      const fileInputLabel = document.querySelector(
-        ".file-input-container .file-name"
-      );
-
-      fileInput.addEventListener("change", function () {
-        if (fileInput.files.length > 0) {
-          fileInputLabel.textContent = fileInput.files[0].name;
-        } else {
-          fileInputLabel.textContent = "فایلی انتخاب نشده است";
-        }
       });
+    });
 
-      // تبدیل تاریخ هجری قمری به میلادی و تنظیم ورودی
-      const projectDeadlineInput = document.getElementById("project_deadline");
+    function nextSection(currentSection) {
+      document.getElementById("section" + currentSection).classList.add("hidden");
+      document.getElementById("section" + (currentSection + 1)).classList.remove("hidden");
+    }
 
-      projectDeadlineInput.addEventListener("input", function () {
-        const hijriDate = moment(projectDeadlineInput.value, "iYYYY/iMM/iDD");
-        if (hijriDate.isValid()) {
-          const gregorianDate = hijriDate.format("YYYY-MM-DD");
-          projectDeadlineInput.dataset.gregorian = gregorianDate;
-        } else {
-          projectDeadlineInput.dataset.gregorian = "";
-        }
-      });
-    </script>
-  </body>
+    function prevSection(currentSection) {
+      document.getElementById("section" + currentSection).classList.add("hidden");
+      document.getElementById("section" + (currentSection - 1)).classList.remove("hidden");
+    }
+  </script>
+</body>
+
 </html>
