@@ -45,7 +45,14 @@ function prevSection(currentSection) {
     .classList.remove("hidden");
 }
 
+var hiden = false;
+
 function visable(id, btn) {
+  if (document.getElementById(btn).value == "دارم") {
+    hiden = true;
+  } else {
+    hiden = false;
+  }
   if (hiden == true) {
     document.getElementById(id).style.display = "block";
     document.getElementById(btn).value = "ندارم";
