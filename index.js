@@ -5,23 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     altFormat: "YYYY/MM/DD",
     observer: true,
     format: "YYYY/MM/DD",
-    initialValue: false,
+    initialValue: true,
     timePicker: {
       enabled: false,
     },
   });
 });
 
-// Ensure DOM is fully loaded before attaching event listeners
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll("input[type='file']").forEach((input) => {
     input.addEventListener("change", function () {
-      // Extract the file name
       var fileName = this.files[0] ? this.files[0].name : "";
-      // Find the sibling element to update the text
-      var siblingElement = this.nextElementSibling; // Adjust based on actual DOM structure
-
-      // Update the text content of the sibling element
+      var siblingElement = this.nextElementSibling;
       if (siblingElement) {
         siblingElement.textContent = fileName
           ? fileName
