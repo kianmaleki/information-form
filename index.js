@@ -66,3 +66,37 @@ function visable(id, btn) {
     hiden = !hiden;
   }
 }
+
+function nextSection(currentSection) {
+  // Find all required input fields in the current section
+  const currentFieldset = document.getElementById(`section${currentSection}`);
+  const requiredInputs = currentFieldset.querySelectorAll(
+    "input[required], textarea[required], select[required]"
+  );
+
+  // Check if all required fields are filled
+  let isValid = true;
+  requiredInputs.forEach((input) => {
+    if (input.value.trim() === "") {
+      isValid = false;
+      // Optionally, you can add visual indication for the user that this field is required
+      input.style.border = "1px solid red";
+    } else {
+      // Reset the border in case it was previously marked as required
+      input.style.border = "";
+    }
+  });
+
+  // If all required fields are filled, proceed to the next section
+  if (isValid) {
+    const nextSection = currentSection + 1;
+    const nextFieldset = document.getElementById(`section${nextSection}`);
+    if (nextFieldset) {
+      currentFieldset.classList.add("hidden");
+      nextFieldset.classList.remove("hidden");
+    }
+  } else {
+    // Optionally, you can inform the user to fill out all required fields
+    alert("لطفاً همه فیلدهای اجباری را پر کنید.");
+  }
+}
