@@ -45,21 +45,21 @@ function prevSection(currentSection) {
     .classList.remove("hidden");
 }
 
-var hiden = false;
+var hiden = true;
 
 function visable(id, btn) {
-  if (document.getElementById(btn).value == "دارم") {
+  if (document.getElementById(btn).value == "ندارم") {
     hiden = true;
   } else {
     hiden = false;
   }
   if (hiden == true) {
-    document.getElementById(id).style.display = "block";
-    document.getElementById(btn).value = "ندارم";
-    hiden = !hiden;
-  } else {
     document.getElementById(id).style.display = "none";
     document.getElementById(btn).value = "دارم";
+    hiden = !hiden;
+  } else {
+    document.getElementById(id).style.display = "block";
+    document.getElementById(btn).value = "ندارم";
     hiden = !hiden;
   }
 }
