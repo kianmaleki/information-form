@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "danstevis";
-  src: url(danstevis.otf);
+  font-family: "iranyek";
+  src: url(Tanha-FD.ttf);
 }
 
 * {
-  font-family: "danstevis";
+  font-family: "iranyek";
   font-weight: 300;
 }
 
@@ -119,11 +119,6 @@ input[type="button"] {
   margin: 0.5rem auto;
   text-align: center;
   width: 45%;
-}
-
-button span {
-  display: inline;
-  align-items: center;
 }
 
 input[type="button"] {
