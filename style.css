@@ -47,9 +47,6 @@ label {
   display: block;
   margin-bottom: 0.2rem;
   padding: 0.1rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
 }
 
 input,
