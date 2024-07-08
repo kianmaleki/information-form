@@ -1,35 +1,42 @@
 function toggleGatewayOptions(type) {
-  var directOptions = document.getElementById("direct_gateway_options");
-  var intermediaryOptions = document.getElementById(
+  const directOptions = document.getElementById("direct_gateway_options");
+  const intermediaryOptions = document.getElementById(
     "intermediary_gateway_options"
   );
+  const directFields = [
+    "direct_gateway_name",
+    "direct_gateway_username",
+    "direct_gateway_password",
+  ];
+  const intermediaryField = "intermediary_gateway_name";
 
   if (type === "direct") {
     directOptions.style.display = "block";
     intermediaryOptions.style.display = "none";
-    document.getElementById("intermediary_gateway_name").required = false;
-    document.getElementById("direct_gateway_name").required = true;
-    document.getElementById("direct_gateway_username").required = true;
-    document.getElementById("direct_gateway_password").required = true;
+    setRequiredFields(directFields, true);
+    setRequiredFields([intermediaryField], false);
   } else if (type === "intermediary") {
     directOptions.style.display = "none";
     intermediaryOptions.style.display = "block";
-    document.getElementById("direct_gateway_name").required = false;
-    document.getElementById("direct_gateway_username").required = false;
-    document.getElementById("direct_gateway_password").required = false;
-    document.getElementById("intermediary_gateway_name").required = true;
+    setRequiredFields(directFields, false);
+    setRequiredFields([intermediaryField], true);
   }
 }
 
-// Initialize Persian date picker
+function setRequiredFields(fields, isRequired) {
+  fields.forEach((field) => {
+    document.getElementById(field).required = isRequired;
+  });
+}
+
 document.querySelectorAll("input[type='file']").forEach((input) => {
   input.addEventListener("change", function () {
-    var fileName = this.files[0] ? this.files[0].name : "";
-    var siblingElement = this.nextElementSibling;
+    const fileName = this.files[0]
+      ? this.files[0].name
+      : "فایلی انتخاب نشده است";
+    const siblingElement = this.nextElementSibling;
     if (siblingElement) {
-      siblingElement.textContent = fileName
-        ? fileName
-        : "فایلی انتخاب نشده است";
+      siblingElement.textContent = fileName;
       siblingElement.style.border = ""; // Reset border when file is selected
     }
   });
@@ -40,8 +47,8 @@ function validateSection(section) {
   const requiredInputs = currentFieldset.querySelectorAll(
     "input[required], textarea[required], select[required]"
   );
-
   let isValid = true;
+
   requiredInputs.forEach((input) => {
     if (input.type === "file") {
       if (!input.files[0]) {
@@ -83,8 +90,8 @@ function prevSection(currentSection) {
 }
 
 function toggleVisibility(id, btn) {
-  var element = document.getElementById(id);
-  var button = document.getElementById(btn);
+  const element = document.getElementById(id);
+  const button = document.getElementById(btn);
 
   if (button.value === "ندارم") {
     element.style.display = "none";
@@ -95,7 +102,6 @@ function toggleVisibility(id, btn) {
   }
 }
 
-// Handle form submission
 document
   .getElementById("project-form")
   .addEventListener("submit", function (event) {
