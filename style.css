@@ -92,13 +92,12 @@ input[type="file"] {
   margin: 1rem auto;
   text-align: center;
   border-radius: 1rem;
-  justify-content: start;
 }
 
 .file-input-container .btn-upload {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   background-color: none;
   color: #eeeeee;
   border: 2px solid #76abae;
@@ -159,7 +158,7 @@ input[type="button"]:hover {
 .file_container {
   width: 80%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-evenly;
   text-align: center;
   margin: 1rem auto;
