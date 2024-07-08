@@ -1,16 +1,22 @@
 @font-face {
-  font-family: "farhang";
-  src: url(FarhangFaNum-Regular.ttf);
+  font-family: "danstevis";
+  src: url(danstevis.otf);
+}
+
+* {
+  font-family: "danstevis";
+  font-weight: 300;
 }
 
 body {
-  font-family: "farhang";
-  font-weight: 500;
   scroll-behavior: smooth;
   direction: rtl;
   padding: 20px;
-  background-color: #222831;
   color: #eeeeee;
+  background-image: radial-gradient(circle at center,
+      #76abae 0%,
+      #31363f 50%,
+      #222831 100%);
 }
 
 .title {
@@ -20,23 +26,31 @@ body {
 }
 
 form {
-  background: #31363f;
+  background: rgba(49, 54, 63, 0.6);
+  /* شفافیت پس‌زمینه */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 6px 0.75px #76abae;
   width: 90%;
   max-width: 600px;
   margin: auto;
+  backdrop-filter: blur(10px);
+  /* افکت بلور */
 }
 
 .form-group {
   margin-bottom: 15px;
+  margin: auto;
+  text-align: center;
 }
 
 label {
   display: block;
   margin-bottom: 0.2rem;
   padding: 0.1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }
 
 input,
@@ -47,8 +61,12 @@ select {
   margin: 1rem auto;
   border: 1px solid #76abae;
   border-radius: 1rem;
-  background-color: #222831;
+  background: rgba(34, 40, 49, 0.6);
+  /* شفافیت پس‌زمینه */
   color: #eeeeee;
+  text-align: right;
+  backdrop-filter: blur(10px);
+  /* افکت بلور */
 }
 
 textarea {
@@ -79,7 +97,7 @@ input[type="file"] {
   background-color: none;
   color: #eeeeee;
   border: 2px solid #76abae;
-  font-weight: 700;
+  font-weight: 200;
   padding: 10px 15px;
   cursor: pointer;
   width: 50%;
@@ -96,7 +114,8 @@ button,
 input[type="button"] {
   background: #76abae;
   color: #eeeeee;
-  font-weight: bolder;
+  font-weight: 500;
+  font-family: 'dastnevis', sans-serif;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
@@ -193,9 +212,11 @@ footer img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #31363f;
+  background-color: rgba(49, 54, 63, 0.6);
+  /* شفافیت پس‌زمینه */
   padding: 1rem;
   border-radius: 1rem;
+  backdrop-filter: blur(10px);
 }
 
 #dargah_options label {
@@ -222,4 +243,15 @@ footer img {
   border-radius: 1rem;
   margin-top: 1rem;
   display: none;
+}
+
+.icon,
+.arrow {
+  width: 15px;
+  height: auto;
+  text-align: center;
+  padding-right: 0.5rem;
+  margin: auto;
+  color: #eeeeee;
+  font-size: 20px;
 }

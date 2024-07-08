@@ -69,7 +69,12 @@
               name="national_id_card"
               required
             />
-            <label for="national_id_card" class="btn-upload">انتخاب فایل</label>
+            <label for="national_id_card" class="btn-upload"
+              >انتخاب فایل
+              <span>
+                <img src="images/uploade.svg" alt="uploade icon" class="icon" />
+              </span>
+            </label>
           </div>
           <div class="file-input-container">
             <label for="birth_certificate">عکس دو صفحه اول شناسنامه:</label>
@@ -80,13 +85,18 @@
               required
             />
             <label for="birth_certificate" class="btn-upload"
-              >انتخاب فایل</label
-            >
+              >انتخاب فایل
+              <span
+                ><img src="images/uploade.svg" alt="uploade icon" class="icon"
+              /></span>
+            </label>
           </div>
         </div>
 
         <div class="navigation-buttons">
-          <button type="button" onclick="nextSection(1)">مرحله بعد</button>
+          <button type="button" onclick="nextSection(1)">
+            مرحله بعد <span class="arrow">&#8592;</span>
+          </button>
         </div>
       </fieldset>
 
@@ -198,13 +208,21 @@
               name="business_license"
               required
             />
-            <label for="business_license" class="btn-upload">انتخاب فایل</label>
+            <label for="business_license" class="btn-upload"
+              >انتخاب فایل
+              <span
+                ><img
+                  src="images/uploade.svg"
+                  alt="uploade icon"
+                  class="icon" /></span
+            ></label>
           </div>
         </div>
 
         <div class="navigation-buttons">
           <button class="no-back" type="button" onclick="prevSection(2)">
             مرحله قبل
+            <span class="arrow">&#8594;</span>
           </button>
           <button type="submit">تایید و ارسال</button>
         </div>
@@ -212,8 +230,8 @@
     </form>
 
     <footer>
-      <a href="#"><img src="logo.png" alt="kiako logo" /></a>
-      <span>created by </span>
+      <a href="#"><img src="/images/logo.png" alt="kiako logo" /></a>
+      <span>created by <span>&copy;</span></span>
     </footer>
 
     <script src="index.js"></script>
