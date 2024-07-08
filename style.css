@@ -27,15 +27,14 @@ body {
 
 form {
   background: rgba(49, 54, 63, 0.6);
-  /* شفافیت پس‌زمینه */
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 6px 0.75px #76abae;
   width: 90%;
   max-width: 600px;
   margin: auto;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  /* افکت بلور */
 }
 
 .form-group {
@@ -62,11 +61,10 @@ select {
   border: 1px solid #76abae;
   border-radius: 1rem;
   background: rgba(34, 40, 49, 0.6);
-  /* شفافیت پس‌زمینه */
   color: #eeeeee;
   text-align: right;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  /* افکت بلور */
 }
 
 textarea {
@@ -213,9 +211,9 @@ footer img {
   justify-content: center;
   align-items: center;
   background-color: rgba(49, 54, 63, 0.6);
-  /* شفافیت پس‌زمینه */
   padding: 1rem;
   border-radius: 1rem;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
