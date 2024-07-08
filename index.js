@@ -37,7 +37,7 @@ document.querySelectorAll("input[type='file']").forEach((input) => {
     const siblingElement = this.nextElementSibling;
     if (siblingElement) {
       siblingElement.textContent = fileName;
-      siblingElement.style.border = ""; // Reset border when file is selected
+      siblingElement.style.border = "";
     }
   });
 });
