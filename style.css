@@ -29,7 +29,7 @@ form {
   background: rgba(49, 54, 63, 0.6);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 6px 0.75px #76abae;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   width: 90%;
   max-width: 600px;
   margin: auto;
@@ -121,6 +121,11 @@ input[type="button"] {
   width: 45%;
 }
 
+button span {
+  display: inline;
+  align-items: center;
+}
+
 input[type="button"] {
   width: 10rem;
   display: inline;
@@ -199,6 +204,7 @@ footer img {
   input[type="button"] {
     width: 100%;
     border-radius: 0.75rem;
+    text-align: center;
   }
 
   .file-input-container {
