@@ -37,8 +37,8 @@ form {
   width: 90%;
   max-width: 600px;
   margin: auto;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
 
 .form-group {
@@ -68,8 +68,8 @@ select {
   color: #fff;
   font-weight: 500;
   text-align: right;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
 
 textarea {
