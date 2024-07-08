@@ -15,32 +15,54 @@
   </head>
 
   <body>
-    <h2 class="title">فرم اطلاعات پروژه وب سایت</h2>
-
     <form id="project-form" action="" method="post">
       <!-- بخش اول: اطلاعات عمومی -->
       <fieldset id="section1">
-        <h3 class="title">اطلاعات عمومی</h3>
+        <h2 class="title">اطلاعات عمومی</h2>
         <div class="form-group">
           <label for="name">نام و نام خانوادگی:</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="نام و نام خانوادگی خود را وارد کنید"
+          />
         </div>
 
         <div class="form-group">
           <label for="mobile">شماره موبایل:</label>
-          <input type="tel" id="mobile" name="mobile" required />
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            required
+            placeholder="09123456789"
+          />
         </div>
 
         <div class="form-group">
           <label for="phone_shop"
             >شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label
           >
-          <input type="tel" id="phone_shop" name="phone_shop" required />
+          <input
+            type="tel"
+            id="phone_shop"
+            name="phone_shop"
+            required
+            placeholder="02112345678"
+          />
         </div>
 
         <div class="form-group">
           <label for="working_hours">ساعات کاری:</label>
-          <input type="text" id="working_hours" name="working_hours" required />
+          <input
+            type="text"
+            id="working_hours"
+            name="working_hours"
+            required
+            placeholder="مثلاً 9 صبح تا 5 عصر"
+          />
         </div>
 
         <div class="form-group">
@@ -52,12 +74,19 @@
             id="company_verification_date"
             name="company_verification_date"
             required
+            placeholder="مثلاً 1402/07/01"
           />
         </div>
 
         <div class="form-group">
           <label for="company_phone">شماره ثابت:</label>
-          <input type="tel" id="company_phone" name="company_phone" required />
+          <input
+            type="tel"
+            id="company_phone"
+            name="company_phone"
+            required
+            placeholder="02112345678"
+          />
         </div>
 
         <div class="form-group file_container">
@@ -86,9 +115,9 @@
             />
             <label for="birth_certificate" class="btn-upload"
               >انتخاب فایل
-              <span
-                ><img src="images/uploade.svg" alt="uploade icon" class="icon"
-              /></span>
+              <span>
+                <img src="images/uploade.svg" alt="uploade icon" class="icon" />
+              </span>
             </label>
           </div>
         </div>
@@ -100,7 +129,7 @@
 
       <!-- بخش دوم: مشخصات فنی وب سایت، مهلت انجام پروژه و بودجه، و نمونه وب سایت‌های مرجع و وب سایت‌های رقیب -->
       <fieldset id="section2" class="hidden">
-        <h3 class="title">مشخصات فنی وب سایت</h3>
+        <h2 class="title">مشخصات فنی وب سایت</h2>
         <div class="form-group">
           <label for="account_number">شماره حساب:</label>
           <input
@@ -108,6 +137,7 @@
             id="account_number"
             name="account_number"
             required
+            placeholder="شماره حساب خود را وارد کنید"
           />
         </div>
 
@@ -115,9 +145,21 @@
           <label>هاست :</label>
           <div id="host_visable" name="host_visable" class="hide">
             <label for="host_name"> نام کاربری هاست:</label>
-            <input type="text" id="host_name" name="host_name" required />
+            <input
+              type="text"
+              id="host_name"
+              name="host_name"
+              required
+              placeholder="نام کاربری هاست"
+            />
             <label for="host_pass"> پسورد هاست:</label>
-            <input type="password" id="host_pass" name="host_pass" required />
+            <input
+              type="password"
+              id="host_pass"
+              name="host_pass"
+              required
+              placeholder="پسورد هاست"
+            />
           </div>
           <input
             class="file-input-container no-back"
@@ -155,26 +197,30 @@
                 type="text"
                 id="direct_gateway_name"
                 name="direct_gateway_name"
+                placeholder="نام درگاه مستقیم"
               />
               <label for="direct_gateway_username">نام کاربری:</label>
               <input
                 type="text"
                 id="direct_gateway_username"
                 name="direct_gateway_username"
+                placeholder="نام کاربری درگاه مستقیم"
               />
               <label for="direct_gateway_password">رمز عبور:</label>
               <input
                 type="password"
                 id="direct_gateway_password"
                 name="direct_gateway_password"
+                placeholder="رمز عبور درگاه مستقیم"
               />
             </div>
             <div id="intermediary_gateway_options" class="hide">
-              <label for="intermediary_gateway_name">نام درگاه:</label>
+              <label for="intermediary_gateway_name">کد مرچنت :</label>
               <input
                 type="text"
                 id="intermediary_gateway_name"
                 name="intermediary_gateway_name"
+                placeholder="کد مرچنت درگاه واسط"
               />
             </div>
           </div>
@@ -194,6 +240,7 @@
             id="tax_tracking_code"
             name="tax_tracking_code"
             required
+            placeholder="کد رهگیری مالیاتی"
           />
         </div>
 
@@ -208,12 +255,10 @@
             />
             <label for="business_license" class="btn-upload"
               >انتخاب فایل
-              <span
-                ><img
-                  src="images/uploade.svg"
-                  alt="uploade icon"
-                  class="icon" /></span
-            ></label>
+              <span>
+                <img src="images/uploade.svg" alt="uploade icon" class="icon"
+              /></span>
+            </label>
           </div>
         </div>
 
