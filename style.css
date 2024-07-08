@@ -1,10 +1,10 @@
 @font-face {
-  font-family: "tanha";
-  src: url(Tanha-FD.ttf);
+  font-family: "iranyekan";
+  src: url(iranyekanwebthinfanum.ttf);
 }
 
 * {
-  font-family: "tanha";
+  font-family: "iranyekan";
   font-weight: 300;
 }
 
