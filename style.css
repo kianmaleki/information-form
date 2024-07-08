@@ -19,8 +19,12 @@ body {
       #222831 100%);
 }
 
-
-
+span {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .title {
   font-size: 24px;
@@ -29,7 +33,6 @@ body {
 }
 
 form {
-
   background: rgba(49, 54, 63, 0.6);
   padding: 20px;
   border-radius: 8px;
@@ -91,8 +94,6 @@ input[type="file"] {
   border-radius: 1rem;
   justify-content: start;
 }
-
-
 
 .file-input-container .btn-upload {
   display: flex;
@@ -216,7 +217,13 @@ footer img {
   .file-input-container {
     width: 70%;
   }
+
+  body {
+    background-color: #31363f;
+    background-image: none;
+  }
 }
+
 
 
 #dargah_options {
