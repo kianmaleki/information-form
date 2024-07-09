@@ -113,10 +113,24 @@ document
 
 window.toggleProjectTypeOptions = function () {
   const projectType = document.getElementById("project_type").value;
-  document
-    .getElementById("coding_options")
-    .classList.toggle("hidden", projectType !== "coding");
-  document
-    .getElementById("wordpress_options")
-    .classList.toggle("hidden", projectType !== "wordpress");
+  const codingOptions = document.getElementById("coding_options");
+  const wordpressOptions = document.getElementById("wordpress_options");
+
+  codingOptions.classList.toggle("hidden", projectType !== "coding");
+  wordpressOptions.classList.toggle("hidden", projectType !== "wordpress");
+
+  // Set required attribute based on project type
+  const codingLanguage = document.getElementById("coding_language");
+  const wordpressTheme = document.getElementById("wordpress_theme");
+
+  if (projectType === "coding") {
+    codingLanguage.setAttribute("required", "required");
+    wordpressTheme.removeAttribute("required");
+  } else if (projectType === "wordpress") {
+    wordpressTheme.setAttribute("required", "required");
+    codingLanguage.removeAttribute("required");
+  } else {
+    codingLanguage.removeAttribute("required");
+    wordpressTheme.removeAttribute("required");
+  }
 };
