@@ -37,7 +37,7 @@ span {
 }
 
 form {
-  background: rgba(49, 54, 63, 0.6);
+  background: rgba(49, 54, 63, 0.4);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
@@ -80,11 +80,11 @@ select {
   backdrop-filter: blur(1px);
 }
 
-select option {
+select option,
+select {
   background-color: #31363f;
   border-radius: 1rem;
-  border: none;
-  padding: 0.25rem;
+  padding: 0.75rem;
 }
 
 textarea {
@@ -298,15 +298,34 @@ footer img {
 }
 
 #host_pass,
-#host_name,
-#coding_options,
-#wordpress_options {
+#host_name {
   width: 95%;
   margin: auto;
   padding: 1rem;
   border-radius: 1rem;
   margin-top: 0.5rem;
   background-color: #31363f;
+}
+
+.coding,
+.wordpress {
+  margin: auto;
+  width: 90%;
+  margin-top: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+
+#coding_options,
+#wordpress_options {
+  margin: auto;
+  width: 100%;
+  background-color: #31363f;
+  border-radius: 1rem;
 }
 
 .hidden {
