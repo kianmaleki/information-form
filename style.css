@@ -44,8 +44,8 @@ form {
   width: 90%;
   max-width: 600px;
   margin: auto;
-  backdrop-filter: blur(0);
   -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
 }
 
 .form-group {
@@ -72,12 +72,12 @@ select {
   margin-bottom: 0.5rem;
   border: 1px solid #76abae;
   border-radius: 1rem;
-  background: #31363f00;
+  background-color: #31363f00;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
   text-align: right;
-  -webkit-backdrop-filter: blur(25px);
-  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
 }
 
 select option {
