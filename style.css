@@ -23,11 +23,11 @@ body {
 }
 
 span {
-  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  text-align: center;
 }
 
 .title {
@@ -93,7 +93,7 @@ textarea {
 
 input[type="file"] {
   display: none;
-  margin: auto;
+  text-align: center;
 }
 
 .file-input-container {
@@ -276,13 +276,9 @@ footer img {
   background-color: #31363f;
 }
 
-.icon,
-.arrow {
+.icon {
   width: 15px;
   height: auto;
-  text-align: center;
-  padding-right: 0.5rem;
-  margin: auto;
   color: #eeeeee;
   font-size: 20px;
 }
