@@ -79,8 +79,7 @@ select {
   backdrop-filter: blur(1px);
 }
 
-select option,
-select {
+select option {
   background-color: #31363f;
   border-radius: 1rem;
   padding: 0.75rem;
