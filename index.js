@@ -11,13 +11,13 @@ function toggleGatewayOptions(type) {
   const intermediaryField = "intermediary_gateway_name";
 
   if (type === "direct") {
-    directOptions.style.display = "block";
+    directOptions.style.display = "flex";
     intermediaryOptions.style.display = "none";
     setRequiredFields(directFields, true);
     setRequiredFields([intermediaryField], false);
   } else if (type === "intermediary") {
     directOptions.style.display = "none";
-    intermediaryOptions.style.display = "block";
+    intermediaryOptions.style.display = "flex";
     setRequiredFields(directFields, false);
     setRequiredFields([intermediaryField], true);
   }
@@ -97,7 +97,7 @@ function toggleVisibility(id, btn) {
     element.style.display = "none";
     button.value = "دارم";
   } else {
-    element.style.display = "block";
+    element.style.display = "flex";
     button.value = "ندارم";
   }
 }
@@ -110,3 +110,13 @@ document
       alert("لطفاً همه فیلدهای اجباری را پر کنید.");
     }
   });
+
+window.toggleProjectTypeOptions = function () {
+  const projectType = document.getElementById("project_type").value;
+  document
+    .getElementById("coding_options")
+    .classList.toggle("hidden", projectType !== "coding");
+  document
+    .getElementById("wordpress_options")
+    .classList.toggle("hidden", projectType !== "wordpress");
+};

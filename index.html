@@ -161,6 +161,7 @@
               placeholder="پسورد هاست"
             />
           </div>
+
           <input
             class="file-input-container no-back"
             type="button"
@@ -168,7 +169,8 @@
             onclick="toggleVisibility('host_visable' , 'host_btn')"
             value="دارم"
           />
-        </div>
+          </div>
+
 
         <div class="form-group">
           <label>درگاه پرداخت :</label>
@@ -224,6 +226,7 @@
               />
             </div>
           </div>
+
           <input
             class="file-input-container no-back"
             type="button"
@@ -231,7 +234,35 @@
             onclick="toggleVisibility('dargah', 'dargah_btn')"
             value="دارم"
           />
-        </div>
+
+            <div class="form-group">
+              <div class="form-group">
+                <label for="project_type">نوع پروژه:</label>
+                <select id="project_type" name="project_type" onchange="toggleProjectTypeOptions()" required>
+                    <option value="">انتخاب کنید</option>
+                    <option value="coding">کدنویسی</option>
+                    <option value="wordpress">وردپرس</option>
+                </select>
+              </div>
+              
+              <div id="coding_options" class="hidden">
+              <div class="form-group">
+                  <label for="coding_description">توضیحات کدنویسی:</label>
+                  <textarea id="coding_description" name="coding_description" rows="4" placeholder="توضیحات کدنویسی"></textarea>
+              </div>
+                      </div>
+                      
+                      <div id="wordpress_options" class="hidden">
+              <div class="form-group">
+                  <label for="wordpress_theme">تم وردپرس:</label>
+                  <input type="text" id="wordpress_theme" name="wordpress_theme" placeholder="نام تم وردپرس"/>
+              </div>
+              <div class="form-group">
+                  <label for="wordpress_plugins">افزونه‌های وردپرس:</label>
+                  <textarea id="wordpress_plugins" name="wordpress_plugins" rows="4" placeholder="نام افزونه‌های وردپرس"></textarea>
+              </div>
+                      </div>
+            </div>  
 
         <div class="form-group">
           <label for="tax_tracking_code">کد رهگیری مالیاتی:</label>

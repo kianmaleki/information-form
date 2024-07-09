@@ -5,18 +5,21 @@
 
 * {
   font-family: "iranyekan";
-  font-weight: 300;
+  font-weight: 400;
 }
 
 body {
   scroll-behavior: smooth;
   direction: rtl;
   padding: 20px;
-  color: #eeeeee;
-  background-image: radial-gradient(circle at center,
-      #76abae 0%,
-      #31363f 45%,
-      #222831 100%);
+  color: #fff;
+  background-image: linear-gradient(116deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 10%, rgba(49, 54, 63, 0.03) 10%, rgba(49, 54, 63, 0.03) 66%, rgba(118, 171, 174, 0.03) 66%, rgba(118, 171, 174, 0.03) 72%, rgba(34, 40, 49, 0.03) 72%, rgba(34, 40, 49, 0.03) 81%, rgba(17, 24, 31, 0.03) 81%, rgba(17, 24, 31, 0.03) 100%),
+    linear-gradient(109deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 23%, rgba(49, 54, 63, 0.03) 23%, rgba(49, 54, 63, 0.03) 63%, rgba(34, 40, 49, 0.03) 63%, rgba(34, 40, 49, 0.03) 73%, rgba(17, 24, 31, 0.03) 73%, rgba(17, 24, 31, 0.03) 84%, rgba(34, 40, 49, 0.03) 84%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(79deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 27%, rgba(49, 54, 63, 0.03) 27%, rgba(49, 54, 63, 0.03) 33%, rgba(34, 40, 49, 0.03) 33%, rgba(34, 40, 49, 0.03) 34%, rgba(17, 24, 31, 0.03) 34%, rgba(17, 24, 31, 0.03) 63%, rgba(34, 40, 49, 0.03) 63%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(109deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 3%, rgba(49, 54, 63, 0.03) 3%, rgba(49, 54, 63, 0.03) 40%, rgba(34, 40, 49, 0.03) 40%, rgba(34, 40, 49, 0.03) 55%, rgba(17, 24, 31, 0.03) 55%, rgba(17, 24, 31, 0.03) 73%, rgba(34, 40, 49, 0.03) 73%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(271deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 11%, rgba(49, 54, 63, 0.03) 11%, rgba(49, 54, 63, 0.03) 23%, rgba(34, 40, 49, 0.03) 23%, rgba(34, 40, 49, 0.03) 72%, rgba(17, 24, 31, 0.03) 72%, rgba(17, 24, 31, 0.03) 86%, rgba(34, 40, 49, 0.03) 86%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(90deg, rgb(34, 40, 49), rgb(17, 24, 31));
+
 }
 
 span {
@@ -24,6 +27,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 
 .title {
@@ -40,14 +44,15 @@ form {
   width: 90%;
   max-width: 600px;
   margin: auto;
-  -webkit-backdrop-filter: blur(25px);
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 .form-group {
   margin-bottom: 15px;
   margin: auto;
   text-align: center;
+
 }
 
 label {
@@ -75,6 +80,13 @@ select {
   backdrop-filter: blur(25px);
 }
 
+select option {
+  background-color: #31363f;
+  border-radius: 1rem;
+  border: none;
+  padding: 0.25rem;
+}
+
 textarea {
   resize: none;
 }
@@ -88,7 +100,6 @@ input[type="file"] {
   width: 50%;
   position: relative;
   overflow: hidden;
-  display: inline;
   margin: 1rem auto;
   text-align: center;
   border-radius: 1rem;
@@ -166,8 +177,13 @@ input[type="button"]:hover {
   font-weight: 700;
 }
 
-.file_container label {
+.file_container label,
+span {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 fieldset {
@@ -183,15 +199,13 @@ footer {
   text-align: center;
 }
 
+
 footer img {
   width: 100px;
   height: auto;
   margin: 1rem;
 }
 
-.hide {
-  display: none;
-}
 
 .no-back {
   background: none;
@@ -217,10 +231,6 @@ footer img {
     width: 70%;
   }
 
-  body {
-    background-color: #31363f;
-    background-image: none;
-  }
 }
 
 
@@ -231,8 +241,8 @@ footer img {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  border-radius: 1rem;
-
+  width: 90%;
+  background-color: #31363f;
 }
 
 #dargah_options label {
@@ -250,6 +260,7 @@ footer img {
 #dargah_options input[type="radio"] {
   cursor: pointer;
   display: none;
+
 }
 
 #direct_gateway_options,
@@ -258,6 +269,11 @@ footer img {
   border-radius: 1rem;
   margin-top: 1rem;
   display: none;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 90%;
+  background-color: #31363f;
 }
 
 .icon,
@@ -269,4 +285,38 @@ footer img {
   margin: auto;
   color: #eeeeee;
   font-size: 20px;
+}
+
+#host_visable,
+#dargah {
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 95%;
+  background-color: #31363f;
+}
+
+#host_pass,
+#host_name,
+#coding_options,
+#wordpress_options {
+  width: 95%;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-top: 0.5rem;
+  background-color: #31363f;
+}
+
+.hidden {
+  display: none;
+}
+
+.hide {
+  display: none;
 }
