@@ -80,7 +80,9 @@ select {
 }
 
 select option {
-  background-color: #31363f;
+  background-color: #1f2228;
+  border: 1px solid #76abae;
+  box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 0.75rem;
 }
