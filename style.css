@@ -51,8 +51,19 @@ form {
   margin-bottom: 15px;
   margin: auto;
   text-align: center;
-
 }
+
+.number_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.w-50 {
+  width: 60%;
+}
+
 
 label {
   display: block;
@@ -60,6 +71,7 @@ label {
   margin-bottom: 0.1rem;
   margin-right: 0.5rem;
   text-align: right;
+  font-size: 0.85rem;
 }
 
 input,
@@ -69,7 +81,7 @@ select {
   padding: 1rem;
   margin: 0.5rem auto;
   margin-bottom: 0.5rem;
-  border: 1px solid #76abae;
+  border: 1px solid #295C5F;
   border-radius: 1rem;
   background-color: #31363f00;
   color: #fff;
@@ -81,7 +93,7 @@ select {
 
 select option {
   background-color: #1f2228;
-  border: 1px solid #76abae;
+  border: 1px solid #295C5F;
   box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 0.75rem;
@@ -100,29 +112,36 @@ input[type="file"] {
   width: 50%;
   position: relative;
   overflow: hidden;
-  margin: 1rem auto;
+  margin: 0.5rem auto;
   text-align: center;
   border-radius: 1rem;
 }
 
 .file-input-container .btn-upload {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   background-color: none;
   color: #eeeeee;
-  border: 2px solid #76abae;
+  border: 2px solid #295C5F;
   font-weight: 200;
-  padding: 10px 15px;
+  padding: 1rem;
   cursor: pointer;
-  width: 50%;
-  margin: 1rem auto;
+  width: 80%;
+  height: 10vh;
+  margin: auto;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
 }
 
 .file-input-container .btn-upload:hover {
   opacity: 0.75;
+}
+
+.w-50 {
+  width: 45%;
 }
 
 button,
@@ -145,7 +164,7 @@ input[type="button"] {
   width: 10rem;
   display: inline;
   background: none;
-  border: 2px solid #76abae;
+  border: 2px solid #295C5F;
   font-weight: 700;
 
 }
@@ -160,6 +179,7 @@ input[type="button"]:hover {
 }
 
 .navigation-buttons {
+
   text-align: center;
   margin-top: 2rem;
   width: 100%;
@@ -167,24 +187,16 @@ input[type="button"]:hover {
 }
 
 .file_container {
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: start;
-  justify-content: space-evenly;
+  justify-content: center;
   text-align: center;
   margin: 1rem auto;
   border-radius: 1rem;
   font-weight: 700;
 }
 
-.file_container label,
-span {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
 
 fieldset {
   border: none;
@@ -194,6 +206,7 @@ footer {
   margin-top: 1rem;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -209,7 +222,7 @@ footer img {
 
 .no-back {
   background: none;
-  border: 2px solid #eeeeee;
+  border: 2px solid #295C5F;
   border-radius: 1rem;
 }
 
@@ -231,8 +244,21 @@ footer img {
     width: 70%;
   }
 
+  .w-50 {
+    width: 100%;
+  }
+
 }
 
+.poshtiban img {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 50px;
+  margin: 2rem;
+  background: none;
+  z-index: 999;
+}
 
 
 #dargah_options {
@@ -254,7 +280,7 @@ footer img {
   width: 45%;
   padding: 0.5rem;
   margin: 0.25rem;
-  border: 2px solid #76abae;
+  border: 2px solid #295C5F;
 }
 
 #dargah_options input[type="radio"] {
@@ -276,10 +302,8 @@ footer img {
 }
 
 .icon {
-  width: 15px;
+  width: 3rem;
   height: auto;
-  color: #eeeeee;
-  font-size: 20px;
 }
 
 #host_visable,
@@ -294,7 +318,7 @@ footer img {
   flex-direction: column;
   width: 95%;
   box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.2);
-  border: 1px solid #76abae30;
+  border: 1px solid #295C5F;
 }
 
 #host_pass,
@@ -323,8 +347,15 @@ footer img {
   margin: 2rem auto;
   width: 100%;
   box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.2);
-  border: 1px solid #76abae30;
+  border: 1px solid #295C5F;
   border-radius: 1rem;
+}
+
+.visable_btn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem;
 }
 
 .hidden {
