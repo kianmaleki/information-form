@@ -13,13 +13,13 @@ body {
   direction: rtl;
   padding: 20px;
   color: #fff;
-  background-image: linear-gradient(116deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 10%, rgba(49, 54, 63, 0.03) 10%, rgba(49, 54, 63, 0.03) 66%, rgba(118, 171, 174, 0.03) 66%, rgba(118, 171, 174, 0.03) 72%, rgba(34, 40, 49, 0.03) 72%, rgba(34, 40, 49, 0.03) 81%, rgba(17, 24, 31, 0.03) 81%, rgba(17, 24, 31, 0.03) 100%),
-    linear-gradient(109deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 23%, rgba(49, 54, 63, 0.03) 23%, rgba(49, 54, 63, 0.03) 63%, rgba(34, 40, 49, 0.03) 63%, rgba(34, 40, 49, 0.03) 73%, rgba(17, 24, 31, 0.03) 73%, rgba(17, 24, 31, 0.03) 84%, rgba(34, 40, 49, 0.03) 84%, rgba(34, 40, 49, 0.03) 100%),
-    linear-gradient(79deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 27%, rgba(49, 54, 63, 0.03) 27%, rgba(49, 54, 63, 0.03) 33%, rgba(34, 40, 49, 0.03) 33%, rgba(34, 40, 49, 0.03) 34%, rgba(17, 24, 31, 0.03) 34%, rgba(17, 24, 31, 0.03) 63%, rgba(34, 40, 49, 0.03) 63%, rgba(34, 40, 49, 0.03) 100%),
-    linear-gradient(109deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 3%, rgba(49, 54, 63, 0.03) 3%, rgba(49, 54, 63, 0.03) 40%, rgba(34, 40, 49, 0.03) 40%, rgba(34, 40, 49, 0.03) 55%, rgba(17, 24, 31, 0.03) 55%, rgba(17, 24, 31, 0.03) 73%, rgba(34, 40, 49, 0.03) 73%, rgba(34, 40, 49, 0.03) 100%),
-    linear-gradient(271deg, rgba(118, 171, 174, 0.03) 0%, rgba(118, 171, 174, 0.03) 11%, rgba(49, 54, 63, 0.03) 11%, rgba(49, 54, 63, 0.03) 23%, rgba(34, 40, 49, 0.03) 23%, rgba(34, 40, 49, 0.03) 72%, rgba(17, 24, 31, 0.03) 72%, rgba(17, 24, 31, 0.03) 86%, rgba(34, 40, 49, 0.03) 86%, rgba(34, 40, 49, 0.03) 100%),
+  margin: auto;
+  background-image: linear-gradient(116deg, rgba(118, 171, 174, 0.03) 0%, rgba(49, 54, 63, 0.03) 10%, rgba(118, 171, 174, 0.03) 66%, rgba(34, 40, 49, 0.03) 81%, rgba(17, 24, 31, 0.03) 100%),
+    linear-gradient(109deg, rgba(118, 171, 174, 0.03) 0%, rgba(49, 54, 63, 0.03) 23%, rgba(34, 40, 49, 0.03) 63%, rgba(17, 24, 31, 0.03) 84%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(79deg, rgba(118, 171, 174, 0.03) 0%, rgba(49, 54, 63, 0.03) 27%, rgba(34, 40, 49, 0.03) 34%, rgba(17, 24, 31, 0.03) 63%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(109deg, rgba(118, 171, 174, 0.03) 0%, rgba(49, 54, 63, 0.03) 3%, rgba(34, 40, 49, 0.03) 40%, rgba(17, 24, 31, 0.03) 55%, rgba(34, 40, 49, 0.03) 100%),
+    linear-gradient(271deg, rgba(118, 171, 174, 0.03) 0%, rgba(49, 54, 63, 0.03) 11%, rgba(34, 40, 49, 0.03) 72%, rgba(17, 24, 31, 0.03) 86%, rgba(34, 40, 49, 0.03) 100%),
     linear-gradient(90deg, rgb(34, 40, 49), rgb(17, 24, 31));
-
 }
 
 span {
@@ -41,10 +41,11 @@ form {
   border-radius: 8px;
   box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.5);
   width: 90%;
-  max-width: 600px;
+  max-width: 40%;
   margin: auto;
-  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+
 }
 
 .form-group {
@@ -56,20 +57,17 @@ form {
 .number_container {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
   width: 100%;
 }
 
 .w-50 {
-  width: 60%;
+  width: 45%;
 }
-
 
 label {
   display: block;
-  margin-top: 1rem;
-  margin-bottom: 0.1rem;
-  margin-right: 0.5rem;
+  margin: 1rem 0.5rem 0.1rem;
   text-align: right;
   font-size: 0.85rem;
 }
@@ -80,15 +78,14 @@ select {
   width: calc(100% - 20px);
   padding: 1rem;
   margin: 0.5rem auto;
-  margin-bottom: 0.5rem;
   border: 1px solid #295C5F;
   border-radius: 1rem;
   background-color: #31363f00;
   color: #fff;
   font-weight: 600;
   text-align: right;
-  -webkit-backdrop-filter: blur(1px);
   backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
 }
 
 select option {
@@ -131,17 +128,12 @@ input[type="file"] {
   width: 80%;
   height: 10vh;
   margin: auto;
-  text-align: center;
   border-radius: 0.5rem;
   margin-top: 1rem;
 }
 
 .file-input-container .btn-upload:hover {
   opacity: 0.75;
-}
-
-.w-50 {
-  width: 45%;
 }
 
 button,
@@ -166,7 +158,6 @@ input[type="button"] {
   background: none;
   border: 2px solid #295C5F;
   font-weight: 700;
-
 }
 
 button:hover,
@@ -179,7 +170,6 @@ input[type="button"]:hover {
 }
 
 .navigation-buttons {
-
   text-align: center;
   margin-top: 2rem;
   width: 100%;
@@ -197,7 +187,6 @@ input[type="button"]:hover {
   font-weight: 700;
 }
 
-
 fieldset {
   border: none;
 }
@@ -212,13 +201,11 @@ footer {
   text-align: center;
 }
 
-
 footer img {
   width: 100px;
   height: auto;
   margin: 1rem;
 }
-
 
 .no-back {
   background: none;
@@ -227,6 +214,7 @@ footer img {
 }
 
 @media screen and (max-width: 700px) {
+
   .file_container {
     flex-direction: column;
     width: 100%;
@@ -237,7 +225,6 @@ footer img {
   input[type="button"] {
     width: 100%;
     border-radius: 0.75rem;
-    text-align: center;
   }
 
   .file-input-container {
@@ -247,10 +234,9 @@ footer img {
   .w-50 {
     width: 100%;
   }
-
 }
 
-.poshtiban img {
+.poshtiban {
   position: fixed;
   bottom: 0;
   right: 0;
@@ -260,7 +246,6 @@ footer img {
   z-index: 999;
 }
 
-
 #dargah_options {
   margin: 1rem auto;
   display: flex;
@@ -269,7 +254,6 @@ footer img {
   align-items: center;
   padding: 1rem;
   width: 95%;
-
 }
 
 #dargah_options label {
@@ -284,9 +268,7 @@ footer img {
 }
 
 #dargah_options input[type="radio"] {
-  cursor: pointer;
   display: none;
-
 }
 
 #direct_gateway_options,
@@ -341,6 +323,13 @@ footer img {
   flex-direction: column;
 }
 
+.page_number {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+}
 
 #coding_options,
 #wordpress_options {

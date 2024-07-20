@@ -18,6 +18,9 @@
     <form id="project-form" action="" method="post">
       <!-- بخش اول: اطلاعات عمومی -->
       <fieldset id="section1">
+        <div class="page_number">
+          <img src="images/page-1.svg" alt="page 1" />
+        </div>
         <h2 class="title">اطلاعات عمومی</h2>
         <div class="form-group">
           <label for="name">نام و نام خانوادگی:</label>
@@ -33,29 +36,26 @@
         <div class="number_container">
           <div class="form-group w-50">
             <label for="mobile">شماره موبایل:</label>
-              <input
-                type="tel"
-                id="mobile"
-                name="mobile"
-                required
-                placeholder="09123456789"
-              />
-            </div>
-            <div class="form-group w-50">
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              required
+              placeholder="09123456789"
+            />
+          </div>
+          <div class="form-group w-50">
             <label for="phone_shop"
-            >شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label>
-              <input
+              >شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label
+            >
+            <input
               type="tel"
               id="phone_shop"
               name="phone_shop"
               required
               placeholder="02112345678"
-                      />
-            </div>
+            />
           </div>
-        </div>
-
-
         </div>
 
         <div class="form-group">
@@ -102,10 +102,9 @@
               name="national_id_card"
               required
             />
-            <label for="national_id_card" class="btn-upload"
-              >
+            <label for="national_id_card" class="btn-upload">
               <span>
-                <img src="images/uploade.svg" alt="uploade icon" class="icon" />
+                <img src="images/uploade.svg" alt="upload icon" class="icon" />
               </span>
               انتخاب فایل
             </label>
@@ -118,10 +117,9 @@
               name="birth_certificate"
               required
             />
-            <label for="birth_certificate" class="btn-upload"
-              >
+            <label for="birth_certificate" class="btn-upload">
               <span>
-                <img src="images/uploade.svg" alt="uploade icon" class="icon" />
+                <img src="images/uploade.svg" alt="upload icon" class="icon" />
               </span>
               انتخاب فایل
             </label>
@@ -135,6 +133,9 @@
 
       <!-- بخش دوم: مشخصات فنی وب سایت، مهلت انجام پروژه و بودجه، و نمونه وب سایت‌های مرجع و وب سایت‌های رقیب -->
       <fieldset id="section2" class="hidden">
+        <div class="page_number">
+          <img src="images/page-2.svg" alt="page 2" />
+        </div>
         <h2 class="title">مشخصات فنی وب سایت</h2>
         <div class="form-group">
           <div class="visable_btn">
@@ -146,26 +147,24 @@
               onclick="toggleVisibility('host_visable' , 'host_btn')"
               value="دارم"
             />
-            </div>
+          </div>
           <div id="host_visable" name="host_visable" class="hide">
-            <label for="host_name"> نام کاربری هاست:</label>
+            <label for="host_name">نام کاربری هاست:</label>
             <input
               type="text"
               id="host_name"
               name="host_name"
-              required
               placeholder="نام کاربری هاست"
             />
-            <label for="host_pass"> پسورد هاست:</label>
+            <label for="host_pass">پسورد هاست:</label>
             <input
               type="password"
               id="host_pass"
               name="host_pass"
-              required
               placeholder="پسورد هاست"
             />
           </div>
-          </div>
+        </div>
         <div class="form-group">
           <div class="visable_btn">
             <span>آیا درگاه پرداخت دارید؟</span>
@@ -220,7 +219,7 @@
               />
             </div>
             <div id="intermediary_gateway_options" class="hide">
-              <label for="intermediary_gateway_name">کد مرچنت :</label>
+              <label for="intermediary_gateway_name">کد مرچنت:</label>
               <input
                 type="text"
                 id="intermediary_gateway_name"
@@ -229,31 +228,7 @@
               />
             </div>
           </div>
-
-            <div class="form-group">
-              <div class="form-group">
-                <label for="project_type">نوع پروژه:</label>
-                <select id="project_type" name="project_type" onchange="toggleProjectTypeOptions()" required>
-                    <option value="">انتخاب کنید</option>
-                    <option value="coding">کدنویسی</option>
-                    <option value="wordpress">وردپرس</option>
-                </select>
-              </div>
-              
-              <div id="coding_options" class="hidden">
-                  <div class="coding">
-                    <label for="coding_description">توضیحات کدنویسی:</label>
-                    <textarea id="coding_description" name="coding_description" rows="4" placeholder="توضیحات کدنویسی"></textarea>
-                  </div>
-                </div>      
-                <div id="wordpress_options" class="hidden"><div class="wordpress">
-                    <label for="wordpress_theme">تم وردپرس:</label>
-                    <input type="text" id="wordpress_theme" name="wordpress_theme" placeholder="نام تم وردپرس"/>
-                    <label for="wordpress_plugins">افزونه‌های وردپرس:</label>
-                    <textarea id="wordpress_plugins" name="wordpress_plugins" rows="4" placeholder="نام افزونه‌های وردپرس"></textarea>
-                </div>
-              </div>
-            </div>  
+        </div>
 
         <div class="form-group">
           <label for="account_number">شماره حساب:</label>
@@ -286,11 +261,10 @@
               name="business_license"
               required
             />
-            <label for="business_license" class="btn-upload"
-              >
+            <label for="business_license" class="btn-upload">
               <span>
-                <img src="images/uploade.svg" alt="uploade icon" class="icon"
-              /></span>
+                <img src="images/uploade.svg" alt="upload icon" class="icon" />
+              </span>
               انتخاب فایل
             </label>
           </div>
@@ -300,14 +274,54 @@
           <button class="no-back" type="button" onclick="prevSection(2)">
             مرحله قبل
           </button>
+          <button type="button" onclick="nextSection(2)">مرحله بعد</button>
+        </div>
+      </fieldset>
+
+      <!--  بخش سوم  -->
+      <fieldset id="section3" class="hidden">
+        <div class="page_number">
+          <img src="images/page-3.svg" alt="page 3" />
+        </div>
+        <h2 class="title">مشخصات فنی وب سایت</h2>
+        <div class="form-group">
+          <label for="project_type">نوع پروژه:</label>
+          <select
+            id="project_type"
+            name="project_type"
+            onchange="toggleProjectTypeOptions()"
+            required
+          >
+            <option value="">انتخاب کنید</option>
+            <option value="coding">کدنویسی</option>
+            <option value="wordpress">وردپرس</option>
+          </select>
+        </div>
+        <div id="coding_options" class="hidden">
+          <div class="coding">
+            <label for="coding_description">توضیحات کدنویسی:</label>
+            <textarea
+              id="coding_description"
+              name="coding_description"
+              rows="4"
+              placeholder="توضیحات کدنویسی"
+            ></textarea>
+          </div>
+        </div>
+        <div id="wordpress_options" class="hidden">
+          <div class="wordpress">
+            <h2>محل قرار گیری چک باکس ها</h2>
+          </div>
+        </div>
+
+        <div class="navigation-buttons">
+          <button class="no-back" type="button" onclick="prevSection(3)">
+            مرحله قبل
+          </button>
           <button type="submit">تایید و ارسال</button>
         </div>
       </fieldset>
     </form>
-
-    <div class="poshtiban">
-      <a href=""><img src="images/poshtibani.svg" alt="poshtibani"></a>
-    </div>
 
     <footer>
       <a href="#"><img src="./images/logo.png" alt="kiako logo" /></a>
