@@ -30,28 +30,32 @@
           />
         </div>
 
-        <div class="form-group">
-          <label for="mobile">شماره موبایل:</label>
-          <input
-            type="tel"
-            id="mobile"
-            name="mobile"
-            required
-            placeholder="09123456789"
-          />
+        <div class="number_container">
+          <div class="form-group w-50">
+            <label for="mobile">شماره موبایل:</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                required
+                placeholder="09123456789"
+              />
+            </div>
+            <div class="form-group w-50">
+            <label for="phone_shop"
+            >شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label>
+              <input
+              type="tel"
+              id="phone_shop"
+              name="phone_shop"
+              required
+              placeholder="02112345678"
+                      />
+            </div>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="phone_shop"
-            >شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label
-          >
-          <input
-            type="tel"
-            id="phone_shop"
-            name="phone_shop"
-            required
-            placeholder="02112345678"
-          />
+
         </div>
 
         <div class="form-group">
@@ -99,10 +103,11 @@
               required
             />
             <label for="national_id_card" class="btn-upload"
-              >انتخاب فایل
+              >
               <span>
                 <img src="images/uploade.svg" alt="uploade icon" class="icon" />
               </span>
+              انتخاب فایل
             </label>
           </div>
           <div class="file-input-container">
@@ -114,10 +119,11 @@
               required
             />
             <label for="birth_certificate" class="btn-upload"
-              >انتخاب فایل
+              >
               <span>
                 <img src="images/uploade.svg" alt="uploade icon" class="icon" />
               </span>
+              انتخاب فایل
             </label>
           </div>
         </div>
@@ -131,18 +137,16 @@
       <fieldset id="section2" class="hidden">
         <h2 class="title">مشخصات فنی وب سایت</h2>
         <div class="form-group">
-          <label for="account_number">شماره حساب:</label>
-          <input
-            type="text"
-            id="account_number"
-            name="account_number"
-            required
-            placeholder="شماره حساب خود را وارد کنید"
-          />
-        </div>
-
-        <div class="form-group">
-          <label>هاست :</label>
+          <div class="visable_btn">
+            <span for="host_btn">آیا شما هاست دارید؟</span>
+            <input
+              class="file-input-container no-back"
+              type="button"
+              id="host_btn"
+              onclick="toggleVisibility('host_visable' , 'host_btn')"
+              value="دارم"
+            />
+            </div>
           <div id="host_visable" name="host_visable" class="hide">
             <label for="host_name"> نام کاربری هاست:</label>
             <input
@@ -161,19 +165,18 @@
               placeholder="پسورد هاست"
             />
           </div>
-
-          <input
-            class="file-input-container no-back"
-            type="button"
-            id="host_btn"
-            onclick="toggleVisibility('host_visable' , 'host_btn')"
-            value="دارم"
-          />
           </div>
-
-
         <div class="form-group">
-          <label>درگاه پرداخت :</label>
+          <div class="visable_btn">
+            <span>آیا درگاه پرداخت دارید؟</span>
+            <input
+              class="file-input-container no-back"
+              type="button"
+              id="dargah_btn"
+              onclick="toggleVisibility('dargah', 'dargah_btn')"
+              value="دارم"
+            />
+          </div>
           <div id="dargah" class="hide">
             <div id="dargah_options">
               <input
@@ -227,14 +230,6 @@
             </div>
           </div>
 
-          <input
-            class="file-input-container no-back"
-            type="button"
-            id="dargah_btn"
-            onclick="toggleVisibility('dargah', 'dargah_btn')"
-            value="دارم"
-          />
-
             <div class="form-group">
               <div class="form-group">
                 <label for="project_type">نوع پروژه:</label>
@@ -261,13 +256,24 @@
             </div>  
 
         <div class="form-group">
+          <label for="account_number">شماره حساب:</label>
+          <input
+            type="text"
+            id="account_number"
+            name="account_number"
+            required
+            placeholder="-- -- -- -- -- -- -- --"
+          />
+        </div>
+
+        <div class="form-group">
           <label for="tax_tracking_code">کد رهگیری مالیاتی:</label>
           <input
             type="text"
             id="tax_tracking_code"
             name="tax_tracking_code"
             required
-            placeholder="کد رهگیری مالیاتی"
+            placeholder="**************"
           />
         </div>
 
@@ -281,10 +287,11 @@
               required
             />
             <label for="business_license" class="btn-upload"
-              >انتخاب فایل
+              >
               <span>
                 <img src="images/uploade.svg" alt="uploade icon" class="icon"
               /></span>
+              انتخاب فایل
             </label>
           </div>
         </div>
@@ -297,6 +304,10 @@
         </div>
       </fieldset>
     </form>
+
+    <div class="poshtiban">
+      <a href=""><img src="images/poshtibani.svg" alt="poshtibani"></a>
+    </div>
 
     <footer>
       <a href="#"><img src="./images/logo.png" alt="kiako logo" /></a>
