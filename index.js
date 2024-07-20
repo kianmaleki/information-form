@@ -8,25 +8,32 @@ function toggleGatewayOptions(type) {
     "direct_gateway_username",
     "direct_gateway_password",
   ];
-  const intermediaryField = "intermediary_gateway_name";
+  const intermediaryFieldavit = "intermediary_gateway_name";
+
+  function setRequiredFields(fields, isRequired) {
+    fields.forEach((field) => {
+      document.getElementById(field).required = isRequired;
+    });
+  }
 
   if (type === "direct") {
     directOptions.style.display = "flex";
     intermediaryOptions.style.display = "none";
     setRequiredFields(directFields, true);
-    setRequiredFields([intermediaryField], false);
+    setRequiredFields([intermediaryFieldavit], false);
   } else if (type === "intermediary") {
     directOptions.style.display = "none";
     intermediaryOptions.style.display = "flex";
     setRequiredFields(directFields, false);
-    setRequiredFields([intermediaryField], true);
+    setRequiredFields([intermediaryFieldavit], true);
+  } else {
+    intermediaryFieldavit.removeAttribute("required");
+    directFields.removeAttribute("required");
+    directFields.forEach((field) => {
+      document.getElementById(field).required = false;
+    });
+    document.getElementById(intermediaryFieldavit).required = false;
   }
-}
-
-function setRequiredFields(fields, isRequired) {
-  fields.forEach((field) => {
-    document.getElementById(field).required = isRequired;
-  });
 }
 
 document.querySelectorAll("input[type='file']").forEach((input) => {
@@ -128,8 +135,5 @@ window.toggleProjectTypeOptions = function () {
   } else if (projectType === "wordpress") {
     wordpressTheme.setAttribute("required", "required");
     codingLanguage.removeAttribute("required");
-  } else {
-    codingLanguage.removeAttribute("required");
-    wordpressTheme.removeAttribute("required");
   }
 };
