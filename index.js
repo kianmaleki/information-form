@@ -119,7 +119,6 @@ window.toggleProjectTypeOptions = function () {
   codingOptions.classList.toggle("hidden", projectType !== "coding");
   wordpressOptions.classList.toggle("hidden", projectType !== "wordpress");
 
-  // Set required attribute based on project type
   const codingLanguage = document.getElementById("coding_language");
   const wordpressTheme = document.getElementById("wordpress_theme");
 
