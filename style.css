@@ -11,9 +11,7 @@
 body {
   scroll-behavior: smooth;
   direction: rtl;
-  padding: 20px;
   color: #fff;
-  margin: auto;
   background-image: linear-gradient(12deg, rgba(193, 193, 193, 0.05) 0%, rgba(193, 193, 193, 0.05) 2%, rgba(129, 129, 129, 0.05) 2%, rgba(129, 129, 129, 0.05) 27%, rgba(185, 185, 185, 0.05) 27%, rgba(185, 185, 185, 0.05) 66%, rgba(83, 83, 83, 0.05) 66%, rgba(83, 83, 83, 0.05) 100%), linear-gradient(321deg, rgba(240, 240, 240, 0.05) 0%, rgba(240, 240, 240, 0.05) 13%, rgba(231, 231, 231, 0.05) 13%, rgba(231, 231, 231, 0.05) 34%, rgba(139, 139, 139, 0.05) 34%, rgba(139, 139, 139, 0.05) 71%, rgba(112, 112, 112, 0.05) 71%, rgba(112, 112, 112, 0.05) 100%), linear-gradient(236deg, rgba(189, 189, 189, 0.05) 0%, rgba(189, 189, 189, 0.05) 47%, rgba(138, 138, 138, 0.05) 47%, rgba(138, 138, 138, 0.05) 58%, rgba(108, 108, 108, 0.05) 58%, rgba(108, 108, 108, 0.05) 85%, rgba(143, 143, 143, 0.05) 85%, rgba(143, 143, 143, 0.05) 100%), linear-gradient(96deg, rgba(53, 53, 53, 0.05) 0%, rgba(53, 53, 53, 0.05) 53%, rgba(44, 44, 44, 0.05) 53%, rgba(44, 44, 44, 0.05) 82%, rgba(77, 77, 77, 0.05) 82%, rgba(77, 77, 77, 0.05) 98%, rgba(8, 8, 8, 0.05) 98%, rgba(8, 8, 8, 0.05) 100%), linear-gradient(334deg, hsl(247, 0%, 2%), hsl(247, 0%, 2%));
 }
 
@@ -32,7 +30,6 @@ span {
 }
 
 form {
-  padding: 20px;
   border-radius: 8px;
   box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.5);
   width: 100%;
@@ -93,7 +90,8 @@ select option {
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
+
 }
 
 input[type="file"] {
@@ -121,7 +119,7 @@ input[type="file"] {
   font-weight: 200;
   padding: 1rem;
   cursor: pointer;
-  width: 80%;
+  width: 70%;
   height: 10vh;
   margin: auto;
   border-radius: 0.5rem;
@@ -228,22 +226,16 @@ footer img {
   }
 
   .file-input-container {
-    width: 70%;
+    width: 100%;
   }
 
   .w-50 {
-    width: 70%;
-  }
-
-  form {
     width: 100%;
-    max-width: 100%;
-    background-color: none;
   }
 
   .number_container {
     width: 90%;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 }
@@ -333,12 +325,14 @@ footer img {
   margin: 3rem auto;
 }
 
+.page_number img {
+  width: 70%;
+}
+
 #coding_options,
 #wordpress_options {
-  margin: 2rem auto;
+  margin: 1rem auto;
   width: 100%;
-  box-shadow: 2px 12px 24px rgba(0, 0, 0, 0.2);
-  border: 1px solid #295C5F;
   border-radius: 1rem;
 }
 
