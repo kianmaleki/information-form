@@ -137,3 +137,37 @@ window.toggleProjectTypeOptions = function () {
     codingLanguage.removeAttribute("required");
   }
 };
+
+var Allprice = 0;
+
+function addPrice(price, id) {
+  var checkBox = document.getElementById(id);
+  if (checkBox.checked) {
+    Allprice += price;
+    checkBox.value = "true";
+  } else {
+    Allprice -= price;
+    checkBox.value = "false";
+  }
+
+  Allprice = Math.round(Allprice);
+
+  document.getElementById("price").innerHTML = ` ${Allprice} `;
+}
+
+function dropdown(id, btn) {
+  const element = document.getElementById(id);
+  const button = document.getElementById(btn);
+
+  if (button.value == "false") {
+    element.classList.remove("hide");
+    element.classList.add("show");
+    button.classList.add("active");
+    button.value = "true";
+  } else {
+    element.classList.remove("show");
+    button.classList.remove("active");
+    element.classList.add("hide");
+    button.value = "false";
+  }
+}
