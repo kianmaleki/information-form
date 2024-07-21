@@ -8,7 +8,7 @@ function toggleGatewayOptions(type) {
     "direct_gateway_username",
     "direct_gateway_password",
   ];
-  const intermediaryFieldavit = "intermediary_gateway_name";
+  const intermediaryField = "intermediary_gateway_name";
 
   function setRequiredFields(fields, isRequired) {
     fields.forEach((field) => {
@@ -20,22 +20,17 @@ function toggleGatewayOptions(type) {
     directOptions.style.display = "flex";
     intermediaryOptions.style.display = "none";
     setRequiredFields(directFields, true);
-    setRequiredFields([intermediaryFieldavit], false);
+    setRequiredFields([intermediaryField], false);
   } else if (type === "intermediary") {
     directOptions.style.display = "none";
     intermediaryOptions.style.display = "flex";
     setRequiredFields(directFields, false);
-    setRequiredFields([intermediaryFieldavit], true);
+    setRequiredFields([intermediaryField], true);
   } else {
-    intermediaryFieldavit.removeAttribute("required");
-    directFields.removeAttribute("required");
-    directFields.forEach((field) => {
-      document.getElementById(field).required = false;
-    });
-    document.getElementById(intermediaryFieldavit).required = false;
+    setRequiredFields(directFields, false);
+    setRequiredFields([intermediaryField], false);
   }
 }
-
 document.querySelectorAll("input[type='file']").forEach((input) => {
   input.addEventListener("change", function () {
     const fileName = this.files[0]
@@ -95,30 +90,27 @@ function prevSection(currentSection) {
     .getElementById(`section${currentSection - 1}`)
     .classList.remove("hidden");
 }
-
 function toggleVisibility(id, btn) {
   const element = document.getElementById(id);
   const button = document.getElementById(btn);
+  const fields = element.querySelectorAll("input, select, textarea");
 
   if (button.value === "ندارم") {
     element.style.display = "none";
     button.value = "دارم";
+    fields.forEach((field) => {
+      field.removeAttribute("required");
+    });
   } else {
     element.style.display = "flex";
     button.value = "ندارم";
+    fields.forEach((field) => {
+      field.setAttribute("required", "required");
+    });
   }
 }
 
-document
-  .getElementById("project-form")
-  .addEventListener("submit", function (event) {
-    if (!validateSection(2)) {
-      event.preventDefault();
-      alert("لطفاً همه فیلدهای اجباری را پر کنید.");
-    }
-  });
-
-window.toggleProjectTypeOptions = function () {
+function toggleProjectTypeOptions() {
   const projectType = document.getElementById("project_type").value;
   const codingOptions = document.getElementById("coding_options");
   const wordpressOptions = document.getElementById("wordpress_options");
@@ -136,38 +128,34 @@ window.toggleProjectTypeOptions = function () {
     wordpressTheme.setAttribute("required", "required");
     codingLanguage.removeAttribute("required");
   }
-};
+}
 
-var Allprice = 0;
+let allPrice = 0;
 
 function addPrice(price, id, cat_id) {
-  let checkBox = document.getElementById(id);
-  let checkBoxCat = document.getElementById(cat_id);
+  const checkBox = document.getElementById(id);
+  const checkBoxCat = document.getElementById(cat_id);
   if (checkBox.checked) {
-    Allprice += price;
+    allPrice += price;
     checkBox.value = "true";
     checkBoxCat.style.border = "2px solid #3AB9C0";
-  } else if (!checkBox.checked) {
-    Allprice -= price;
-    checkBox.value = "false";
-    checkBoxCat.style.border = "1px solid #3AB9C0";
   } else {
+    allPrice -= price;
+    checkBox.value = "false";
     checkBoxCat.style.border = "1px solid #3AB9C0";
   }
 
-  Allprice = Math.round(Allprice);
-
-  document.getElementById("price").innerHTML = ` ${Allprice} `;
+  allPrice = Math.round(allPrice);
+  document.getElementById("price").innerHTML = ` ${allPrice} `;
 }
 
 function dropdown(id, btn) {
   const element = document.getElementById(id);
   const button = document.getElementById(btn);
 
-  if (button.value == "false") {
+  if (button.value === "false") {
     element.classList.remove("hide");
     element.classList.add("show");
-
     button.value = "true";
   } else {
     element.classList.remove("show");
