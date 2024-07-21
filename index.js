@@ -140,14 +140,19 @@ window.toggleProjectTypeOptions = function () {
 
 var Allprice = 0;
 
-function addPrice(price, id) {
-  var checkBox = document.getElementById(id);
+function addPrice(price, id, cat_id) {
+  let checkBox = document.getElementById(id);
+  let checkBoxCat = document.getElementById(cat_id);
   if (checkBox.checked) {
     Allprice += price;
     checkBox.value = "true";
-  } else {
+    checkBoxCat.style.border = "2px solid #3AB9C0";
+  } else if (!checkBox.checked) {
     Allprice -= price;
     checkBox.value = "false";
+    checkBoxCat.style.border = "1px solid #3AB9C0";
+  } else {
+    checkBoxCat.style.border = "1px solid #3AB9C0";
   }
 
   Allprice = Math.round(Allprice);
@@ -162,11 +167,10 @@ function dropdown(id, btn) {
   if (button.value == "false") {
     element.classList.remove("hide");
     element.classList.add("show");
-    button.classList.add("active");
+
     button.value = "true";
   } else {
     element.classList.remove("show");
-    button.classList.remove("active");
     element.classList.add("hide");
     button.value = "false";
   }

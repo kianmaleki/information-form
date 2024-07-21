@@ -349,7 +349,7 @@ footer img {
 }
 
 .active {
-  border: 3px solid #3AB9C0;
+  border: 2px solid #3AB9C0;
 }
 
 .hide {
@@ -367,9 +367,9 @@ footer img {
   align-items: center;
   border: 1px solid #418B8F;
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   margin: auto;
-  padding: 0.25rem;
+  padding: 0.5rem;
   border-radius: 10px;
 }
 
@@ -394,11 +394,12 @@ h3 {
 .check-box-category {
   background-color: #1f2228;
   border-radius: 6px;
-  justify-content: start;
+  justify-content: space-between;
   width: 100%;
   display: flex;
-  border: 1px solid #295C5F;
+  border: 1px solid #3AB9C0;
 }
+
 
 .checkbox-wrapper-30,
 .check-box-price {
