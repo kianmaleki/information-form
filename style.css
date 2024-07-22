@@ -11,6 +11,8 @@
 }
 
 body {
+  height: 100vh;
+  background: fixed;
   scroll-behavior: smooth;
   direction: rtl;
   background-image:
