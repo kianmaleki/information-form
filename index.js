@@ -175,3 +175,17 @@ function dropdown(id, btn) {
     button.value = "false";
   }
 }
+
+function active() {
+  let btn_direct_gateway = document.getElementById("direct_gateway");
+  let btn_intermediary_gateway = document.getElementById(
+    "intermediary_gateway"
+  );
+  if (btn_direct_gateway) {
+    btn_direct_gateway.classList.add("active");
+    btn_intermediary_gateway.classList.remove("active");
+  } else {
+    btn_intermediary_gateway.classList.add("active");
+    btn_direct_gateway.classList.remove("active");
+  }
+}
