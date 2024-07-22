@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <form id="project-form" action="#" method="get">
+    <form id="project-form" action="" method="post">
       <!-- بخش اول: اطلاعات عمومی -->
       <fieldset id="section1">
         <div class="page_number">
@@ -45,7 +45,9 @@
             />
           </div>
           <div class="form-group w-50">
-            <label for="phone_shop">شماره تلفن ثابت مغازه (جهت احراز):</label>
+            <label for="phone_shop"
+              >شماره تلفن ثابت مغازه (پاسخگو جهت احراز):</label
+            >
             <input
               type="tel"
               id="phone_shop"
@@ -183,7 +185,7 @@
                 id="direct_gateway"
                 name="payment_gateway"
                 value="direct"
-                onclick="toggleGatewayOptions('direct');active()"
+                onclick="toggleGatewayOptions('direct')"
               />
               <label for="direct_gateway">درگاه مستقیم</label>
               <input
@@ -191,7 +193,7 @@
                 id="intermediary_gateway"
                 name="payment_gateway"
                 value="intermediary"
-                onclick="toggleGatewayOptions('intermediary');active()"
+                onclick="toggleGatewayOptions('intermediary')"
               />
               <label for="intermediary_gateway">درگاه واسط</label>
             </div>
@@ -360,35 +362,13 @@
           <button class="no-back" type="button" onclick="prevSection(3)">
             مرحله قبل
           </button>
-          <button type="button" onclick="nextSection(3)">
-            تایید و ارسال اطلاعات
-          </button>
-        </div>
-      </fieldset>
-      <fieldset id="section4" class="hidden">
-        <div class="page_number">
-          <img src="images/finish.svg" alt="finish" />
-        </div>
-        <div class="finish-container">
-          <div class="finish-img">
-            <img src="./images/human.svg" alt="" />
-          </div>
-          <div class="finish-text">
-            <h3>اطلاعات شما با موفقیت ثبت شد!</h3>
-            <p>
-              از صبر و شکیبایی شما سپاس گزاریم و در عصر وقتهمکاران ما با شما
-              تماس میگیرند.
-            </p>
-          </div>
-          <button type="submit" onclick="prevSection(0)">
-            تایید و برگشت به صفحه اصلی
-          </button>
+          <button type="submit">تایید و ارسال</button>
         </div>
       </fieldset>
     </form>
 
     <footer>
-      <a href=""><img src="./images/logo.png" alt="kiako logo" /></a>
+      <a href="#"><img src="./images/logo.png" alt="kiako logo" /></a>
       <p>created by</p>
       <p>&copy;</p>
     </footer>
