@@ -8,11 +8,12 @@
   font-weight: 400;
   text-decoration: none;
   color: #fff;
+  box-sizing: border-box;
 }
 
 body {
   height: 100vh;
-  background: fixed;
+  background-attachment: fixed;
   scroll-behavior: smooth;
   direction: rtl;
   background-image:
@@ -44,12 +45,10 @@ form {
   max-width: 600px;
   margin: auto;
   background: #1E2C37;
-
 }
 
 .form-group {
-  margin: auto;
-  margin-bottom: 15px;
+  margin: 0 auto 15px;
   text-align: center;
   width: 90%;
 }
@@ -58,7 +57,7 @@ form {
   display: flex;
   justify-content: space-evenly;
   align-items: start;
-  width: 100%;
+  width: 90%;
   margin: auto;
 }
 
@@ -75,8 +74,7 @@ label {
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  margin: 0.2rem auto;
-  margin-top: 0.75rem;
+  margin: 0.75rem auto 0.2rem;
   text-align: right;
   font-size: 0.85rem;
 }
@@ -111,12 +109,14 @@ textarea {
 
 input[type="file"] {
   display: none;
-  text-align: center;
 }
 
 .file-input-container {
   width: 100%;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   margin: 0.5rem auto;
   text-align: center;
@@ -128,18 +128,17 @@ input[type="file"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: none;
   color: #eeeeee;
   border: 2px solid #295c5f;
   font-weight: 200;
   padding: 1rem;
   cursor: pointer;
-  width: 70%;
-  height: 10vh;
+  width: 60%;
+  height: 15vh;
   margin: auto;
   border-radius: 0.5rem;
   margin-top: 1rem;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .file-input-container .btn-upload:hover {
@@ -156,7 +155,6 @@ input[type="button"] {
   padding: 10px 20px;
   border-radius: 0.75rem;
   cursor: pointer;
-  display: inline;
   margin: 0.25rem auto;
   text-align: center;
   width: 45%;
@@ -164,7 +162,6 @@ input[type="button"] {
 
 input[type="button"] {
   width: 10rem;
-  display: inline;
   background: none;
   border: 2px solid #295c5f;
   font-weight: 700;
@@ -198,12 +195,10 @@ input[type="button"]:hover {
   font-weight: 700;
 }
 
-
 .finish-container .finish-img,
 .finish-text {
   margin: 1rem auto;
   width: 90%;
-  flex-direction: row;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -227,6 +222,7 @@ input[type="button"]:hover {
 }
 
 fieldset {
+  width: 100%;
   border: none;
 }
 
@@ -252,7 +248,7 @@ footer img {
   border-radius: 1rem;
 }
 
-@media screen and (max-width: 600) {
+@media screen and (max-width: 600px) {
   .file_container {
     flex-direction: column;
     width: 100%;
@@ -274,8 +270,8 @@ footer img {
   }
 
   .number_container {
-    width: 90%;
-    flex-direction: row;
+    width: 100%;
+    flex-direction: column;
     align-items: center;
   }
 }
@@ -311,8 +307,8 @@ footer img {
   border-radius: 1rem;
   margin-top: 1rem;
   display: none;
-  justify-content: center;
-  align-items: start;
+  justify-content: start;
+  align-items: center;
   flex-direction: column;
   width: 95%;
 }
@@ -388,8 +384,7 @@ footer img {
   margin: 1rem;
 }
 
-.active,
-.selected-button {
+.active {
   border: 2px solid #3ab9c0;
 }
 

@@ -1,8 +1,10 @@
+// Function to toggle gateway options based on the selected type
 function toggleGatewayOptions(type) {
   const directOptions = document.getElementById("direct_gateway_options");
   const intermediaryOptions = document.getElementById(
     "intermediary_gateway_options"
   );
+
   const directFields = [
     "direct_gateway_name",
     "direct_gateway_username",
@@ -10,6 +12,7 @@ function toggleGatewayOptions(type) {
   ];
   const intermediaryField = "intermediary_gateway_name";
 
+  // Function to set required attribute for fields
   function setRequiredFields(fields, isRequired) {
     fields.forEach((field) => {
       document.getElementById(field).required = isRequired;
@@ -31,6 +34,8 @@ function toggleGatewayOptions(type) {
     setRequiredFields([intermediaryField], false);
   }
 }
+
+// Update file input label with the selected file name
 document.querySelectorAll("input[type='file']").forEach((input) => {
   input.addEventListener("change", function () {
     const fileName = this.files[0]
@@ -44,6 +49,7 @@ document.querySelectorAll("input[type='file']").forEach((input) => {
   });
 });
 
+// Validate required fields in a section
 function validateSection(section) {
   const currentFieldset = document.getElementById(`section${section}`);
   const requiredInputs = currentFieldset.querySelectorAll(
@@ -70,6 +76,7 @@ function validateSection(section) {
   return isValid;
 }
 
+// Move to the next section if the current section is valid
 function nextSection(currentSection) {
   if (validateSection(currentSection)) {
     const nextSection = currentSection + 1;
@@ -84,12 +91,15 @@ function nextSection(currentSection) {
   }
 }
 
+// Move to the previous section
 function prevSection(currentSection) {
   document.getElementById(`section${currentSection}`).classList.add("hidden");
   document
     .getElementById(`section${currentSection - 1}`)
     .classList.remove("hidden");
 }
+
+// Toggle visibility of elements and set required attribute based on the button value
 function toggleVisibility(id, btn) {
   const element = document.getElementById(id);
   const button = document.getElementById(btn);
@@ -110,6 +120,7 @@ function toggleVisibility(id, btn) {
   }
 }
 
+// Toggle project type options based on the selected project type
 function toggleProjectTypeOptions() {
   const projectType = document.getElementById("project_type").value;
   const codingOptions = document.getElementById("coding_options");
@@ -132,9 +143,11 @@ function toggleProjectTypeOptions() {
 
 let allPrice = 0;
 
+// Update total price based on selected options
 function addPrice(price, id, cat_id) {
   const checkBox = document.getElementById(id);
   const checkBoxCat = document.getElementById(cat_id);
+
   if (checkBox.checked) {
     allPrice += price;
     checkBox.value = "true";
@@ -149,6 +162,7 @@ function addPrice(price, id, cat_id) {
   document.getElementById("price").innerHTML = ` ${allPrice} `;
 }
 
+// Toggle dropdown visibility
 function dropdown(id, btn) {
   const element = document.getElementById(id);
   const button = document.getElementById(btn);
@@ -164,16 +178,30 @@ function dropdown(id, btn) {
   }
 }
 
-function active() {
-  let btn_direct_gateway = document.getElementById("direct_gateway");
-  let btn_intermediary_gateway = document.getElementById(
-    "intermediary_gateway"
-  );
-  if (btn_direct_gateway) {
-    btn_direct_gateway.classList.add("active");
-    btn_intermediary_gateway.classList.remove("active");
-  } else {
-    btn_intermediary_gateway.classList.add("active");
-    btn_direct_gateway.classList.remove("active");
+// Function to activate a specific button and deactivate others
+function setActiveButton(activeButtonId, otherButtonIds) {
+  // Remove 'active' class from all other buttons
+  otherButtonIds.forEach((buttonId) => {
+    const button = document.getElementById(buttonId);
+    if (button) {
+      button.classList.remove("active");
+    }
+  });
+
+  // Add 'active' class to the specified button
+  const activeButton = document.getElementById(activeButtonId);
+  if (activeButton) {
+    activeButton.classList.add("active");
   }
+}
+
+// Example usage
+function active() {
+  const directGatewayId = "direct_gateway";
+  const intermediaryGatewayId = "intermediary_gateway";
+
+  const activeButtonId = directGatewayId; // Set this based on your logic
+  const otherButtonIds = [intermediaryGatewayId];
+
+  setActiveButton(activeButtonId, otherButtonIds);
 }
